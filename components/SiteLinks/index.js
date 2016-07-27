@@ -22,6 +22,9 @@ class SiteLinks extends React.Component {
           <li>
             <a href={config.siteCodePenUrl}><i className="fa fa-codepen"></i></a>
           </li>
+          <li>
+            <a href={config.siteLinkedInUrl}><i className="fa fa-linkedin"></i></a>
+          </li>
         </ul>
       </div>
     );
