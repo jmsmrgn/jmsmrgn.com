@@ -7,14 +7,14 @@ import SiteLinks from '../SiteLinks'
 import './style.css'
 
 class SiteSidebar extends React.Component {
-    render() {
-        const {location, children} = this.props
-        const isHome = location.pathname === prefixLink('/')
+  render() {
+    const { location, children } = this.props;
+    const isHome = location.pathname === prefixLink('/')
 
         let header = (
         <header>
           <Link style={ {    textDecoration: 'none',    borderBottom: 'none',    outline: 'none'} } to={ prefixLink('/') }>
-          <img src='./photo.jpg' width='75' height='75' />
+          <img src='./photo.png' width='75' height='75' />
           </Link>
           { isHome ? (
             <h1><Link style={ {    textDecoration: 'none',    borderBottom: 'none',    color: 'inherit'} } to={ prefixLink('/') }> { config.siteAuthor } </Link></h1>
@@ -39,7 +39,7 @@ class SiteSidebar extends React.Component {
                   <footer>
                     <SiteLinks {...this.props}/>
                     <p className='copyright'>
-                      &copy; All rights reserved.
+                      &copy; 2016 James Morgan
                     </p>
                   </footer>
                 </div>

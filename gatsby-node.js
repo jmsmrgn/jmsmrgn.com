@@ -1,6 +1,6 @@
-var rucksack = require('rucksack-css')
-var lost = require("lost")
-var cssnext = require("postcss-cssnext")
+var rucksack = require('rucksack-css');
+var lost = require("lost");
+var cssnext = require("postcss-cssnext");
 
 exports.modifyWebpackConfig = function(config, env) {
     config.merge({
