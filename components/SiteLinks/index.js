@@ -8,22 +8,22 @@ import '../../static/fonts/fontawesome/style.css';
 class SiteLinks extends React.Component {
   render() {
     return (
-      <div className="blog-social">
+      <div className='blog-social'>
         <ul>
           <li>
-            <a href={config.siteEmailUrl}><i className="fa fa-envelope-o"></i></a>
+            <a href={config.siteEmailUrl}><i className='fa fa-envelope-o' /></a>
           </li>
           <li>
-            <a href={config.siteTwitterUrl}><i className="fa fa-twitter"></i></a>
+            <a href={config.siteTwitterUrl}><i className='fa fa-twitter' /></a>
           </li>
           <li>
-            <a href={config.siteGithubUrl}><i className="fa fa-github-alt"></i></a>
+            <a href={config.siteGithubUrl}><i className='fa fa-github-alt' /></a>
           </li>
           <li>
-            <a href={config.siteCodePenUrl}><i className="fa fa-codepen"></i></a>
+            <a href={config.siteCodePenUrl}><i className='fa fa-codepen' /></a>
           </li>
           <li>
-            <a href={config.siteLinkedInUrl}><i className="fa fa-linkedin"></i></a>
+            <a href={config.siteLinkedInUrl}><i className='fa fa-linkedin' /></a>
           </li>
         </ul>
       </div>
@@ -31,4 +31,4 @@ class SiteLinks extends React.Component {
   }
 }
 
-export default SiteLinks
+export default SiteLinks;
