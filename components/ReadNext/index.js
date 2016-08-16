@@ -11,9 +11,11 @@ class ReadNext extends React.Component {
     const { readNext } = post;
 
     let nextPost;
+
     if (readNext) {
       nextPost = find(pages, (page) => includes(page.path, readNext));
     }
+
     if (!nextPost) {
       return React.createElement('noscript', null);
     } else {
@@ -35,7 +37,7 @@ class ReadNext extends React.Component {
 
 ReadNext.propTypes = {
   post: React.PropTypes.object.isRequired,
-  pages: React.PropTypes.array,
+  pages: React.PropTypes.array
 };
 
 export default ReadNext;

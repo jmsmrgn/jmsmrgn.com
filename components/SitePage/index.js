@@ -1,10 +1,10 @@
 import React from 'react';
-import moment from 'moment';
-import { RouteHandler, Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers';
-import DocumentTitle from 'react-document-title';
-import access from 'safe-access';
-import { config } from 'config';
+// import moment from 'moment';
+// import { RouteHandler, Link } from 'react-router';
+// import { prefixLink } from 'gatsby-helpers';
+// import DocumentTitle from 'react-document-title';
+// import access from 'safe-access';
+// import { config } from 'config';
 import SiteSidebar from '../SiteSidebar';
 import './style.css';
 
@@ -21,7 +21,7 @@ class SitePage extends React.Component {
             <div className='main-inner'>
               <div className='blog-page'>
                 <div className='text'>
-                  <h1>{ post.title }</h1>
+                  <h1>{post.title}</h1>
                   <div dangerouslySetInnerHTML={{ __html: post.body }} />
                 </div>
               </div>
@@ -35,7 +35,8 @@ class SitePage extends React.Component {
 
 SitePage.propTypes = {
   post: React.PropTypes.object.isRequired,
-  pages: React.PropTypes.array
+  pages: React.PropTypes.array,
+  route: React.PropTypes.object
 };
 
 export default SitePage;

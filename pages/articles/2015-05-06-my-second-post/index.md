@@ -1,10 +1,10 @@
 ---
-title: My Second Post!
+title: Quick n Dirty webpack-o-rama
 date: "2015-05-06T23:46:37.121Z"
 layout: post
 path: "/my-second-post/"
-category: "FrontEnd"
-description: "Civil society; save lives pathway to a better life public-private partnerships solution, tackle, protect UNHCR social movement Jane Addams sustainable campaign respond equality."
+category: "React"
+description: "Quick and simple webpack setup for rapid prototyping."
 ---
 
 Wow! I love blogging so much already.

@@ -1,9 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-import {RouteHandler, Link} from 'react-router';
-import DocumentTitle from 'react-document-title';
+import { RouteHandler, Link } from 'react-router';
+// import DocumentTitle from 'react-document-title';
 import { prefixLink } from 'gatsby-helpers';
-import access from 'safe-access';
+// import access from 'safe-access';
 import { config } from 'config';
 import ReadNext from '../ReadNext';
 import './style.css';
@@ -13,32 +13,27 @@ class SitePost extends React.Component {
   render() {
     const { route } = this.props;
     const post = route.page.data;
-    const home = (
-      <div>
-        <Link className='gohome' to={prefixLink('/')}> All Articles
-        </Link>
-      </div>
-    );
 
     return (
       <div>
-        { home }
+        <div>
+          <Link className='gohome' to={prefixLink('/')}>All Articles</Link>
+        </div>
         <div className='blog-single'>
           <div className='text'>
             <h1>{ post.title }</h1>
             <div dangerouslySetInnerHTML={{ __html: post.body }} />
+            <hr />
             <div className='date-published'>
               <em>Published { moment(post.datePublished).format('D MMM YYYY') }</em>
+              <br />
+              <a href={config.siteTwitterUrl}>
+                @{config.siteUsername}
+              </a>
             </div>
           </div>
           <div className='footer'>
             <ReadNext post={post} {...this.props} />
-            <hr />
-            <p>
-              { config.siteDescr }
-              <a href={config.twitter}>
-                <br /><strong>{config.siteAuthor}</strong> on Twitter</a>
-            </p>
           </div>
         </div>
       </div>
@@ -48,7 +43,8 @@ class SitePost extends React.Component {
 
 SitePost.propTypes = {
   post: React.PropTypes.object.isRequired,
-  pages: React.PropTypes.array
+  pages: React.PropTypes.array,
+  route: React.PropTypes.object
 };
 
 export default SitePost;

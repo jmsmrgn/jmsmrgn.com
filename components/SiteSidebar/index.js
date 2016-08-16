@@ -12,28 +12,22 @@ class SiteSidebar extends React.Component {
     const { location, children } = this.props;
     const isHome = location.pathname === prefixLink('/');
 
-    let header = (
-      <header>
-        <Link style={{ textDecoration: 'none', borderBottom: 'none', outline: 'none' }} to={prefixLink('/')}>
-          <img src={prefixLink(profilePic)} width='75' height='75' alt='' />
-        </Link>
-        { isHome ? (
-          <h1><Link style={{ textDecoration: 'none', borderBottom: 'none', color: 'inherit' }} to={prefixLink('/')}> { config.siteAuthor } </Link></h1>
-          ) :
-          <h2><Link style={{ textDecoration: 'none', borderBottom: 'none', color: 'inherit' }} to={prefixLink('/')}> { config.siteAuthor } </Link></h2>
-        }
-        <p>
-          { config.siteDescr }
-        </p>
-      </header>
-    );
-
     return (
       <div className='sidebar'>
         <div className='sidebar-inner'>
           <div className='blog-details'>
             <header>
-              { header }
+              <Link style={{ textDecoration: 'none', borderBottom: 'none', outline: 'none' }} to={prefixLink('/')}>
+                <img src={prefixLink(profilePic)} width='75' height='75' alt='' />
+              </Link>
+              { isHome ? (
+                <h1><Link style={{ textDecoration: 'none', borderBottom: 'none', color: 'inherit' }} to={prefixLink('/')}> { config.siteAuthor } </Link></h1>
+                ) :
+                <h2><Link style={{ textDecoration: 'none', borderBottom: 'none', color: 'inherit' }} to={prefixLink('/')}> { config.siteAuthor } </Link></h2>
+              }
+              <p>
+                { config.siteDescr }
+              </p>
             </header>
           </div>
           <div className='blog-options'>
@@ -41,7 +35,7 @@ class SiteSidebar extends React.Component {
             <footer>
               <SiteLinks {...this.props} />
               <p className='copyright'>
-                &copy; 2016 James Morgan
+                &copy;2016 James Morgan
               </p>
             </footer>
           </div>

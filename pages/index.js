@@ -6,7 +6,7 @@ import DocumentTitle from 'react-document-title';
 import { prefixLink } from 'gatsby-helpers';
 import access from 'safe-access';
 import { config } from 'config';
-import SitePost from '../components/SitePost';
+// import SitePost from '../components/SitePost';
 import SiteSidebar from '../components/SiteSidebar';
 
 class SiteIndex extends React.Component {
@@ -23,15 +23,13 @@ class SiteIndex extends React.Component {
 
         pageLinks.push(
           <div className='blog-post'>
-            <time dateTime={moment(datePublished).format('MMMM D, YYYY')}>
-              {moment(datePublished).format('MMMM YYYY')}
+            <time className='published' dateTime={moment(datePublished).format('MMMM D, YYYY')}>
+              {moment(datePublished).format('MMMM D, YYYY')}
             </time>
-            <span style={{ padding: '5px' }} />
             <span className='blog-category'>{ category }</span>
             <h2><Link style={{ borderBottom: 'none' }} to={prefixLink(page.path)} > {title}</Link></h2>
             <p dangerouslySetInnerHTML={{ __html: description }} />
-            <Link className='readmore' to={prefixLink(page.path)}> Read
-            </Link>
+            <span className="post-divider">&mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash;</span>
           </div>
         );
       }

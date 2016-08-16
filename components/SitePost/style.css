@@ -9,6 +9,9 @@
   line-height: 30px;
   margin-bottom: 20px;
 }
+.blog-post h2 a {
+  border-bottom: none;
+}
 .blog-post h2 a:hover {
   border-bottom: 1px solid;
 }
@@ -28,6 +31,7 @@
   color: #72ec92;
   font-weight: 500;
   text-transform: uppercase;
+  padding-left: 10px;
 }
 .blog-post .readmore {
   font-size: 16px;
@@ -85,6 +89,13 @@
   color: #444;
   background: #f4f4f4;
   border: 0;
+}
+.blog-post .post-divider {
+  color: #999;
+  opacity: 0.2;
+}
+.blog-post:last-child .post-divider {
+  display: none;
 }
 @media (max-width:900px) {
   .blog-single h1 {

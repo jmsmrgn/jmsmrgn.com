@@ -21,7 +21,8 @@
     "quotes": ["error", "single"],
     "one-var": [0],
     "one-var-declaration-per-line": [0],
-    "react/jsx-filename-extension": [0]
+    "react/jsx-filename-extension": [0],
+    "import/no-extraneous-dependencies": [0]
   },
   "globals": {
     "__PREFIX_LINKS__": true,

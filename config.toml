@@ -1,11 +1,12 @@
-siteTitle = "jmsmrgn.com"
-siteDescr = "front-end developer"
-siteAuthor = "James Morgan"
+siteTitle = 'jmsmrgn.com'
+siteDescr = 'front-end dev'
+siteAuthor = 'James Morgan'
+siteUsername = 'jmsmrgn'
 
-siteEmailUrl = "mailto:mail@jmsmrgn.com"
-siteTwitterUrl = "https://twitter.com/jmsmrgn"
-siteGithubUrl = "https://github.com/jmsmrgn"
-siteCodePenUrl = "http://codepen.io/jmsmrgn/"
-siteLinkedInUrl = "https://www.linkedin.com/in/jmsmrgn"
+siteEmailUrl = 'mailto:mail@jmsmrgn.com'
+siteTwitterUrl = 'https://twitter.com/jmsmrgn'
+siteGithubUrl = 'https://github.com/jmsmrgn'
+siteCodePenUrl = 'http://codepen.io/jmsmrgn/'
+siteLinkedInUrl = 'https://www.linkedin.com/in/jmsmrgn'
 
-linkPrefix = "/lumen"
+linkPrefix = '/lumen'

@@ -6,6 +6,7 @@ import './style.css';
 class SiteNav extends React.Component {
   render() {
     const { location } = this.props;
+
     return (
       <nav className='blog-nav'>
         <ul>
@@ -14,11 +15,11 @@ class SiteNav extends React.Component {
             </Link>
           </li>
           <li>
-            <Link to='/about' className={location.pathname === prefixLink('/about') ? 'current' : null}> About me
+            <Link to='/about' className={location.pathname === prefixLink('/about') ? 'current' : null}> About
             </Link>
           </li>
           <li>
-            <Link to='/contact' className={location.pathname === prefixLink('/contact') ? 'current' : null}> Contact me
+            <Link to='/contact' className={location.pathname === prefixLink('/contact') ? 'current' : null}> Contact
             </Link>
           </li>
         </ul>
