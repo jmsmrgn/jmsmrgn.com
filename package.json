@@ -4,7 +4,7 @@
   "description": "React powered blog on jmsmrgn.com",
   "main": "n/a",
   "scripts": {
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "build": "npm run clean & gatsby build & copy",
     "clean:public": "rm -rf public",
     "clean": "npm run clean:public",
@@ -26,20 +26,20 @@
     "gatsby": "^0.12.3",
     "history": "^2.1.1",
     "lodash": "^4.14.1",
-    "markdown-it": "^6.0.2",
+    "markdown-it": "^7.0.1",
     "moment": "^2.14.1",
     "react": "^15.3.0",
     "react-document-title": "^2.0.2",
     "react-dom": "^15.3.0",
     "react-google-analytics": "^0.2.0",
-    "react-router": "^2.6.1",
+    "react-router": "^2.7.0",
     "safe-access": "^0.1.0",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
-    "babel-core": "^6.11.4",
-    "babel-loader": "^6.2.4",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
     "babel-preset-react-hmre": "^1.1.1",
     "css-loader": "^0.23.1",
     "eslint": "^3.2.2",
@@ -52,13 +52,12 @@
     "image-webpack-loader": "^2.0.0",
     "lost": "^7.0.3",
     "null-loader": "^0.1.1",
-    "postcss-loader": "^0.9.1",
+    "postcss-loader": "^0.10.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.10",
     "rucksack-css": "^0.8.5",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.1",
-    "webpack-dashboard": "0.0.1"
+    "webpack": "^1.13.1"
   }
 }
