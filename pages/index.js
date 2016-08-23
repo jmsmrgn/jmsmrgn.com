@@ -6,51 +6,50 @@ import DocumentTitle from 'react-document-title';
 import { prefixLink } from 'gatsby-helpers';
 import access from 'safe-access';
 import { config } from 'config';
-// import SitePost from '../components/SitePost';
 import SiteSidebar from '../components/SiteSidebar';
 
-class SiteIndex extends React.Component {
-  render() {
-    const pageLinks = [];
-    // Sort pages.
-    const sortedPages = sortBy(this.props.route.pages, (page) => access(page, 'data.date')).reverse();
-    sortedPages.forEach((page) => {
-      if (access(page, 'file.ext') === 'md' && access(page, 'data.layout') === 'post') {
-        const title = access(page, 'data.title') || page.path;
-        const description = access(page, 'data.description');
-        const datePublished = access(page, 'data.date');
-        const category = access(page, 'data.category');
+const SiteIndex = (props) => {
+  const pageLinks = [];
 
-        pageLinks.push(
-          <div className='blog-post'>
-            <time className='published' dateTime={moment(datePublished).format('MMMM D, YYYY')}>
-              {moment(datePublished).format('MMMM D, YYYY')}
-            </time>
-            <span className='blog-category'>{ category }</span>
-            <h2><Link style={{ borderBottom: 'none' }} to={prefixLink(page.path)} > {title}</Link></h2>
-            <p dangerouslySetInnerHTML={{ __html: description }} />
-            <span className="post-divider">&mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash;</span>
-          </div>
-        );
-      }
-    });
+  // sort pages
+  const sortedPages = sortBy(props.route.pages, (page) => { access(page, 'data.date'); }).reverse();
 
-    return (
-      <DocumentTitle title={config.siteTitle}>
-        <div>
-          <SiteSidebar {...this.props} />
-          <div className='content'>
-            <div className='main'>
-              <div className='main-inner'>
-                { pageLinks }
-              </div>
+  sortedPages.forEach((page) => {
+    if (access(page, 'file.ext') === 'md' && access(page, 'data.layout') === 'post') {
+      const title = access(page, 'data.title') || page.path;
+      const description = access(page, 'data.description');
+      const datePublished = access(page, 'data.date');
+      const category = access(page, 'data.category');
+
+      pageLinks.push(
+        <div className='blog-post'>
+          <time className='published' dateTime={moment(datePublished).format('MMMM D, YYYY')}>
+            {moment(datePublished).format('MMMM D, YYYY')}
+          </time>
+          <span className='blog-category'>{ category }</span>
+          <h2><Link style={{ borderBottom: 'none' }} to={prefixLink(page.path)} > {title}</Link></h2>
+          <p dangerouslySetInnerHTML={{ __html: description }} />
+          <span className="post-divider">&mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash;</span>
+        </div>
+      );
+    }
+  });
+
+  return (
+    <DocumentTitle title={config.siteTitle}>
+      <div>
+        <SiteSidebar {...props} />
+        <div className='content'>
+          <div className='main'>
+            <div className='main-inner'>
+              { pageLinks }
             </div>
           </div>
         </div>
-      </DocumentTitle>
-    );
-  }
-}
+      </div>
+    </DocumentTitle>
+  );
+};
 
 SiteIndex.propTypes = {
   route: React.PropTypes.object

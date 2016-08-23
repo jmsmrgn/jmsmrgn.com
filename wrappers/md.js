@@ -4,29 +4,27 @@ import SitePost from '../components/SitePost';
 import SitePage from '../components/SitePage';
 import { config } from 'config';
 
-class MarkdownWrapper extends React.Component {
-  render() {
-    const { route } = this.props;
-    const post = route.page.data;
-    let layout, template;
+const MarkdownWrapper = (props) => {
+  const { route } = props;
+  const post = route.page.data;
+  let layout, template;
 
-    layout = post.layout;
+  layout = post.layout;
 
-    if (layout !== 'page') {
-      template = <SitePost {...this.props} />;
-    } else {
-      template = <SitePage {...this.props} />;
-    }
-
-    return (
-      <DocumentTitle title={`${post.title} - ${config.siteTitle}`}>
-        <div>
-          { template }
-        </div>
-      </DocumentTitle>
-    );
+  if (layout !== 'page') {
+    template = <SitePost {...props} />;
+  } else {
+    template = <SitePage {...props} />;
   }
-}
+
+  return (
+    <DocumentTitle title={`${post.title} - ${config.siteTitle}`}>
+      <div>
+        { template }
+      </div>
+    </DocumentTitle>
+  );
+};
 
 MarkdownWrapper.propTypes = {
   route: React.PropTypes.object

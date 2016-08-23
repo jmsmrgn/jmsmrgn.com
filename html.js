@@ -11,8 +11,7 @@ module.exports = React.createClass({
   },
 
   render() {
-    const productionBuild = Boolean(this.props.body);
-    const { body, route } = this.props;
+    const { body } = this.props;
     const title = DocumentTitle.rewind();
     const font = <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css' />;
     let css;
