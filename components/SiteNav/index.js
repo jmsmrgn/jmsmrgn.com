@@ -14,11 +14,11 @@ const SiteNav = (props) => {
           </Link>
         </li>
         <li>
-          <Link to='/about' className={location.pathname === prefixLink('/about') ? 'current' : null}> About
+          <Link to='/about/' className={location.pathname === prefixLink('/about/') ? 'current' : null}> About
           </Link>
         </li>
         <li>
-          <Link to='/contact' className={location.pathname === prefixLink('/contact') ? 'current' : null}> Contact
+          <Link to='/contact/' className={location.pathname === prefixLink('/contact/') ? 'current' : null}> Contact
           </Link>
         </li>
       </ul>
