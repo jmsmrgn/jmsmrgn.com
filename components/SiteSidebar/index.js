@@ -5,7 +5,7 @@ import { config } from 'config';
 import SiteNav from '../SiteNav';
 import SiteLinks from '../SiteLinks';
 import './style.css';
-import profilePic from '../../pages/photo.png';
+import profilePic from '../../pages/photo.jpg';
 
 const SiteSidebar = (props) => {
   const { location } = props;

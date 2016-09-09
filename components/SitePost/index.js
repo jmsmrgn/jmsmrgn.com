@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 import ReadNext from '../ReadNext';
+import SiteSidebar from '../SiteSidebar';
 import './style.css';
 import '../../static/css/highlight.css';
 
@@ -13,9 +14,10 @@ const SitePost = (props) => {
 
   return (
     <div>
-      <div>
+      {/* <div>
         <Link className='gohome' to={prefixLink('/')}>All Articles</Link>
-      </div>
+      </div> */}
+      <SiteSidebar {...props} />
       <div className='blog-single'>
         <div className='text'>
           <h1>{ post.title }</h1>

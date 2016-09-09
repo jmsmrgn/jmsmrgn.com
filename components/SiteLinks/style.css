@@ -30,3 +30,11 @@
 .blog-social ul > li:hover a > i {
   color: #444;
 }
+
+@media (max-width: 500px) {
+  .blog-social ul  {
+    padding: 0 0 0 7px;
+    margin: 10px auto;
+    width: 152px;
+  }
+}

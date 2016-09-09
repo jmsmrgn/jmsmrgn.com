@@ -14,7 +14,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build --prefix-links && gh-pages -d public"
   },
-  "author": "James Morgan <mail@jmsmrgn.com>",
+  "author": "James Morgan <hi@jmsmrgn.com>",
   "license": "MIT",
   "dependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
