@@ -23,7 +23,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "classnames": "^2.2.5",
     "front-matter": "^2.1.0",
-    "gatsby": "^0.12.5",
+    "gatsby": "^0.12.7",
     "history": "^2.1.1",
     "lodash": "^4.15.0",
     "markdown-it": "^7.0.1",
