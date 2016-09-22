@@ -12,11 +12,11 @@ const SiteSidebar = (props) => {
   const isHome = location.pathname === prefixLink('/');
 
   return (
-    <div className='sidebar'>
-      <div className='sidebar-inner'>
-        <div className='blog-details'>
+    <div className="sidebar">
+      <div className="sidebar-inner">
+        <div className="blog-details">
           <header>
-            <Link style={{ textDecoration: 'none', borderBottom: 'none', outline: 'none' }} to={prefixLink('/')}>
+            <Link style={{textDecoration: 'none', borderBottom: 'none', outline: 'none'}} to={prefixLink('/')}>
               <img src={prefixLink(profilePic)} width='75' height='75' alt='' />
             </Link>
             { isHome ? (
@@ -30,11 +30,11 @@ const SiteSidebar = (props) => {
             </p>
           </header>
         </div>
-        <div className='blog-options'>
+        <div className="blog-options">
           <SiteNav {...props} />
           <footer>
             <SiteLinks {...props} />
-            <p className='copyright'>
+            <p className="copyright">
               &copy;2016 James Morgan
             </p>
           </footer>

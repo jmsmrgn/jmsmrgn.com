@@ -1,7 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 import ReadNext from '../ReadNext';
 import SiteSidebar from '../SiteSidebar';
@@ -12,27 +10,29 @@ const SitePost = (props) => {
   const { route } = props;
   const post = route.page.data;
 
+  console.log(post)
+
   return (
     <div>
       {/* <div>
         <Link className='gohome' to={prefixLink('/')}>All Articles</Link>
       </div> */}
       <SiteSidebar {...props} />
-      <div className='blog-single'>
-        <div className='text'>
+      <div className="blog-single">
+        <div className="text">
           <h1>{ post.title }</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.body }} />
+          <div dangerouslySetInnerHTML={{__html: post.body}} />
           <hr />
-          <div className='date-published'>
-            <em>Published { moment(post.datePublished).format('D MMM YYYY') }</em>
+          <div className="date-published">
+            <em>Published {moment(post.datePublished).format('D MMM YYYY')}</em>
             <br />
             <a href={config.siteTwitterUrl}>
               @{config.siteUsername}
             </a>
           </div>
         </div>
-        <div className='footer'>
-          <ReadNext post={post} {...props} />
+        <div className="footer">
+          <ReadNext post={post} pages={route.pages} />
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@ const SitePost = (props) => {
 };
 
 SitePost.propTypes = {
-  // post: React.PropTypes.object.isRequired,
+  post: React.PropTypes.object,
   route: React.PropTypes.object
 };
 

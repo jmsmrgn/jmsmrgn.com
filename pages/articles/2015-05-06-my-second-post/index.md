@@ -3,6 +3,7 @@ title: Quick n Dirty webpack-o-rama
 date: "2015-05-06T23:46:37.121Z"
 layout: post
 path: "/my-second-post/"
+readNext: "/hi-folks/"
 category: "React"
 description: "Quick and simple webpack setup for rapid prototyping."
 ---

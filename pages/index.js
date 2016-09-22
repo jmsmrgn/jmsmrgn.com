@@ -22,13 +22,13 @@ const SiteIndex = (props) => {
       const category = access(page, 'data.category');
 
       pageLinks.push(
-        <div className='blog-post'>
-          <time className='published' dateTime={moment(datePublished).format('MMMM D, YYYY')}>
+        <div className="blog-post">
+          <time className="published" dateTime={moment(datePublished).format('MMMM D, YYYY')}>
             {moment(datePublished).format('MMMM D, YYYY')}
           </time>
-          <span className='blog-category'>{ category }</span>
-          <h2><Link style={{ borderBottom: 'none' }} to={prefixLink(page.path)} > {title}</Link></h2>
-          <p dangerouslySetInnerHTML={{ __html: description }} />
+          <span className="blog-category">{category}</span>
+          <h2><Link style={{borderBottom: 'none'}} to={prefixLink(page.path)} > {title}</Link></h2>
+          <p dangerouslySetInnerHTML={{__html: description}} />
           <span className="post-divider">&mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash;</span>
         </div>
       );
@@ -39,10 +39,10 @@ const SiteIndex = (props) => {
     <DocumentTitle title={config.siteTitle}>
       <div>
         <SiteSidebar {...props} />
-        <div className='content'>
-          <div className='main'>
-            <div className='main-inner'>
-              { pageLinks }
+        <div className="content">
+          <div className="main">
+            <div className="main-inner">
+              {pageLinks}
             </div>
           </div>
         </div>

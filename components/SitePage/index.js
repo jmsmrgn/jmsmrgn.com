@@ -9,13 +9,13 @@ const SitePage = (props) => {
   return (
     <div>
       <SiteSidebar {...props} />
-      <div className='content'>
-        <div className='main'>
-          <div className='main-inner'>
-            <div className='blog-page'>
-              <div className='text'>
+      <div className="content">
+        <div className="main">
+          <div className="main-inner">
+            <div className="blog-page">
+              <div className="text">
                 <h1>{post.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: post.body }} />
+                <div dangerouslySetInnerHTML={{__html: post.body}} />
               </div>
             </div>
           </div>
@@ -26,7 +26,7 @@ const SitePage = (props) => {
 };
 
 SitePage.propTypes = {
-  // post: React.PropTypes.object.isRequired,
+  post: React.PropTypes.object.isRequired,
   pages: React.PropTypes.array,
   route: React.PropTypes.object
 };

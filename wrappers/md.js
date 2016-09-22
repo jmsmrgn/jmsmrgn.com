@@ -7,9 +7,8 @@ import { config } from 'config';
 const MarkdownWrapper = (props) => {
   const { route } = props;
   const post = route.page.data;
-  let layout, template;
-
-  layout = post.layout;
+  const layout = post.layout;
+  let template;
 
   if (layout !== 'page') {
     template = <SitePost {...props} />;
@@ -20,7 +19,7 @@ const MarkdownWrapper = (props) => {
   return (
     <DocumentTitle title={`${post.title} - ${config.siteTitle}`}>
       <div>
-        { template }
+        {template}
       </div>
     </DocumentTitle>
   );
