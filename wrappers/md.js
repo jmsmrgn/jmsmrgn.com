@@ -1,5 +1,5 @@
 import React from 'react';
-import DocumentTitle from 'react-document-title';
+import Helmet from 'react-helmet';
 import SitePost from '../components/SitePost';
 import SitePage from '../components/SitePage';
 import { config } from 'config';
@@ -17,11 +17,12 @@ const MarkdownWrapper = (props) => {
   }
 
   return (
-    <DocumentTitle title={`${post.title} - ${config.siteTitle}`}>
+    <div>
+      <Helmet title={`${post.title} - ${config.siteTitle}`} />
       <div>
         {template}
       </div>
-    </DocumentTitle>
+    </div>
   );
 };
 
