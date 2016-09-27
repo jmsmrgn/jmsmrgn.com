@@ -1,12 +1,16 @@
 var rucksack = require('rucksack-css');
 var cssnext = require('postcss-cssnext');
-var nested = require('postcss-nested');
+var nestedRules = require('postcss-nested');
+var nestedAncestors = require('postcss-nested-ancestors');
+var simpleVars = require('postcss-simple-vars');
 
-exports.modifyWebpackConfig = function(config, env) {
+exports.modifyWebpackConfig = function(config) {
   config.merge({
     postcss: [
       rucksack(),
-      nested(),
+      nestedRules(),
+      nestedAncestors(),
+      simpleVars(),
       cssnext({
         browsers: ['>1%', 'last 2 versions']
       })
