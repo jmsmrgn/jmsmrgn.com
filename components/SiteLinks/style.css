@@ -3,9 +3,14 @@
 }
 .blog-social ul {
   list-style: none;
-  padding: 0;
-  margin: 10px 0;
+  padding: 0 0 0 7px;
   clear: fix-legacy;
+  width: 152px;
+  margin: 10px auto;
+  @media (min-width: 767px) {
+    padding: 0;
+    margin: 0;
+  }
 }
 .blog-social ul > li {
   float: left;
@@ -29,12 +34,4 @@
 }
 .blog-social ul > li:hover a > i {
   color: #444;
-}
-
-@media (max-width: 500px) {
-  .blog-social ul  {
-    padding: 0 0 0 7px;
-    margin: 10px auto;
-    width: 152px;
-  }
 }

@@ -13,7 +13,7 @@ const SitePost = (props) => {
   console.log(post)
 
   return (
-    <div>
+    <div className="wrapper">
       {/* <div>
         <Link className='gohome' to={prefixLink('/')}>All Articles</Link>
       </div> */}

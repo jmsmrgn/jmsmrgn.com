@@ -29,9 +29,9 @@
     "markdown-it": "^7.0.1",
     "moment": "^2.14.1",
     "react": "^15.3.1",
-    "react-document-title": "^2.0.2",
     "react-dom": "^15.3.1",
     "react-google-analytics": "^0.2.0",
+    "react-helmet": "^3.1.0",
     "react-router": "^2.7.0",
     "safe-access": "^0.1.0",
     "underscore.string": "^3.3.4"
@@ -50,7 +50,6 @@
     "file-loader": "^0.9.0",
     "gh-pages": "^0.11.0",
     "image-webpack-loader": "^2.0.0",
-    "lost": "^7.0.4",
     "null-loader": "^0.1.1",
     "postcss-loader": "^0.10.1",
     "react-transform-catch-errors": "^1.0.2",

@@ -8,7 +8,7 @@ const Template = (props) => {
   const { children } = props;
 
   return (
-    <div className="wrapper">
+    <div className="template">
       { children }
     </div>
   );

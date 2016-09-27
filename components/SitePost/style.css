@@ -40,9 +40,6 @@
 .blog-post .readmore:hover {
   border-bottom: 1px solid;
 }
-.blog-single {
-  lost-column: 2/3;
-}
 .blog-single h1 {
   text-align: center;
   margin-top: 30px;
@@ -94,19 +91,4 @@
 }
 .blog-post:last-child .post-divider {
   display: none;
-}
-@media (max-width: 1100px) {
-  .blog-single {
-    lost-column: 2/3;
-  }
-}
-@media (max-width: 1200px) {
-  .blog-single {
-    lost-column: 2/3;
-  }
-}
-@media (max-width: 500px) {
-  .blog-single {
-    lost-column: 1;
-  }
 }

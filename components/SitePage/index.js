@@ -7,7 +7,7 @@ const SitePage = (props) => {
   const post = route.page.data;
 
   return (
-    <div>
+    <div className="wrapper">
       <SiteSidebar {...props} />
       <div className="content">
         <div className="main">
